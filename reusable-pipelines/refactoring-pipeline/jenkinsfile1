@@ -1,12 +1,11 @@
 pipeline {
     agent any
-    
+    tools {
+        maven 'apache-maven-3.6.3' 
+    }
     environment {
       VERSION = '0.1.0'
       RELEASE_VERSION = 'R.2'
-    }
-    tools {
-    maven 'maven 3.2.5'
     }
     stages {
       stage('Audit tools') {
